@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<HTML Lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatible" contect="IE=edge">
+    <meta name="viewport" contect="width=device-width,initial-scale=1.0">
+    <title>Document</title> 
+<style>
+body {
+    font-family: sans-sarif;
+    background: black;
+}
+.contenedor{
+    gap: 20px;
+    width: 102%;
+    display: flex;
+    flex-wrap: wrap;
+    aling-content: flex-start;
+}
+.I {
+    width: 100%;
+    flex-grow: 1;     
+    flex-basis: 100px; 
+    border-radius: 20px;
+  &:hover {
+      scale: 130%;
+      transition: .2s linear;
+      border: 2px solid #4f9;
+      box-shadow: 0 0 30px #4f9;
+ }
+}
+#Pantalla {
+    border-radius: 20px;
+}
+#Modal {
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  display: none;
+  z-index: 9999;
+  overflow: auto;
+  position: fixed;
+  background: rgb(0,0,0,.5);
+}
+.alerta {
+  top: 15%;
+  width: 80%;
+  opacity: .8;
+  padding: 20px;
+  background: rgb(0,0,0,7);
+  margin: 15% auto;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid #888;
+  box-shadow: 10px 10px 0 #000;
+}
+.cerrar {
+  color: gray;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+ &:hover {
+     color: red;
+ }
+}
+@keyframes Sesion {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes Close {
+    0% {opacity: 1;}
+    100% {opacity: 0; display: none;}
+}
+@keyframes Desliz {
+    0% {transform: translate(0, 5vh);}
+    100% {transform: translate(0, 0vh);}
+}
+@keyframes Desfaz {
+    0% {transform: translate(0, 0vh); background: transparent; opacity: 1;}
+    99% {transform: translate(0, 5vh); background: transparent;}
+    100% {display: none; background: transparent; opacity: 0;}
+}
+a {
+   color: blue;
+   display: grid;
+   padding: 8px;
+   font-size: 25px;
+   font-weight: bold;
+   text-decoration: none;
+ &:hover{
+     color: red;
+ }
+}
+#TITULO {
+    color: red;
+    font-weight: bold;
+}
+.puff-in-hor {
+	-webkit-animation: puff-in-hor 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes puff-in-hor {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-hor {
+  0% {
+    -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+    -webkit-filter: blur(4px);
+            filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+</style>
+</head>
+<body>
+           <center class="puff-in-hor">                       
+  <iframe id="Pantalla" src="https://drive.google.com/file/d/1l8Sbr8Uas_QdodCz21aWGyEWyEymDz97/preview" style="width:100%; aspect-ration:6/19" frameborder="0" allowfullscreen="true" allow="encrypted-media" name="WILLOW"></iframe>
+           
+  <div open id="Modal">
+ <div id="Alerta" class="alerta">
+    <span class="cerrar" onclick="cerrarAlerta()">&times;</span>
+      <h4 id="TITULO"></h4>
+     <a id="LINK1" href="#" target="_blank">🔴 SALA 1</a>
+     <a id="LINK2" href="#" target="_blank">🔴 SALA 2</a>
+     <a id="LINK3" href="#" target="_blank">🔴 SALA 3</a>
+    
+           </div></div>
+  
+  <ul onclick="mostrarAlerta()">
+     <div class="contenedor">
+  <li><img id="A" class="I" src="https://da.gd/xPisS"></li>
+    
+        <li><img id="B" class="I" src="https://da.gd/UxWM0"></li>       
+
+        <li><img id="C" class="I" src="https://da.gd/BAhvS9"></li>
+
+        <li><img id="D" class="I" src="https://da.gd/FeYOJI"></li>       
+
+       <li><img id="E" class="I" src="https://da.gd/j3OWo6"></li>
+
+        <li><img id="F" class="I" src="https://da.gd/lphLIu"></li> 
+        
+        <li><img id="G" class="I" src="https://da.gd/9hxOly"></li>      
+
+        <li><img id="H" class="I" src="https://da.gd/QxXzr"></li>
+               
+        <li><img id="I" class="I" src="https://da.gd/nsWXT"></li>
+
+        <li><img id="J" class="I" src="https://da.gd/FqKnt"></li>        
+        
+        <li><img id="K" class="I" src="https://da.gd/vY3NUc"></li>      
+
+        <li><img id="Li" class="I" src="https://da.gd/Rg2s4F"></li>
+
+        <li><img id="M" class="I" src="https://da.gd/AM5MF"></li> 
+        
+        <li><img id="N" class="I" src="https://da.gd/ao3Vik"></li>
+        
+        <li><img id="O" class="I" src="https://da.gd/gLQIk"></li>       
+
+    </ul>
+            </div>
+         </div>
+      </center>
+     
+            <img id="L" src="https://da.gd/WtPVG9" alt="Retroceder"/>       
+                      
+<script>
+    function mostrarAlerta() {
+ Modal.style.display = "block";
+ Modal.style.animation = 'Sesion .8s linear forwards';
+}
+
+function cerrarAlerta() {
+ Modal.style.animation = 'Desfaz .8s linear forwards';
+}
+
+    A.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/15MLutjxyWnZE3sHNooKrGsEIuF90LmL3";
+        LINK2.href = "https://drive.google.com/drive/folders/1lnTDn_193OENhkaMsqOpvBpniN2zqSu8";
+        LINK3.href = "https://drive.google.com/drive/folders/1_VnnnmJE5VAgNdoDRSs_r2O0ZOnQfzPX";
+    LINK2.style.opacity = "1";
+    LINK3.style.opacity = "1";
+     TITULO.textContent = "CONSPIRACIONES";
+    }
+    
+    B.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14o6bf_8HnaPIYVA792aOn3TZWgK8KBUK";
+        LINK2.href = "https://drive.google.com/drive/folders/13CS14HIF3wmpE-54G7-FEZlrIWxOENO8";
+     LINK3.style.opacity = ".1";
+     LINK2.style.opacity = "1";
+        TITULO.textContent = "REACTIVE FACTORY PROJECT";
+    }
+    
+    C.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/15EM0_7gLTt4527i0f9t0bba0aOO9vVln";
+    LINK2.style.opacity = ".1";
+    LINK3.style.opacity = ".1";
+        TITULO.textContent = "ALPHA MIND";
+    }
+    
+    D.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14lBWMqBCyJ8ZcDnW8EJhchkkvZE1zdNx";
+        LINK2.href = "https://drive.google.com/drive/folders/1LSk9cEVbkSPlhPwhHgrlKAqrP9EIXLRP";
+    LINK3.style.opacity = ".1";
+    LINK2.style.opacity = "1";
+        TITULO.textContent = "DEMIURGO";
+    }
+    
+    E.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/151cV7BGLbzsVNFVIwKOzNrKZqAc02uer";
+        LINK2.href = "https://drive.google.com/drive/folders/1-2wE9ooOBIoXIVmYlWIyCp-ItBeFmuCr";
+        LINK3.href = "https://drive.google.com/drive/folders/1zJFX8Pqw1jqb-01C6W8CqTQVhFHlICAZ";
+    LINK2.style.opacity = "1";
+    LINK3.style.opacity = "1";
+        TITULO.textContent = "EXPUS";
+    }
+    
+    F.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14ArpYnKlgUxnAmrmYMWrnKwbA30S95z-";
+        LINK2.href = "https://drive.google.com/drive/folders/1y6b69LP0S4B_Jat591wg7TIL9lCJkglN";
+        LINK3.href = "https://drive.google.com/drive/folders/1SSLvrRQT4k8YygEqrNosbxF8altvlOqA";
+    LINK2.style.opacity = "1";
+    LINK3.style.opacity = "1";
+        TITULO.textContent = "HISTORY";
+}
+        
+        G.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14xTgt4uU8s5Gv_EdoxENGe-76_yNgbDk";
+    LINK2.style.opacity = ".1";
+    LINK3.style.opacity = ".1";
+        TITULO.textContent = "REVELANDO EL VELO";
+}     
+
+      H.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/15YkA9Q3sxBoCgowqiDnZezcQ7o6mah_W";
+        LINK2.href = "https://drive.google.com/drive/folders/13Y-BcWF8KRanBKUSgywZCoT6BNA-EljN";
+        LINK3.href = "https://drive.google.com/drive/folders/1DBaQUp6p3rhdZyfHyGqmhZAcStfRsrNb";
+    LINK2.style.opacity = "1";
+    LINK3.style.opacity = "1";
+        TITULO.textContent = "TEOSOFIA"; 
+}         
+
+       I.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14mWQZnfMg9vQEh-s56IXmQpK17_vFb5S";
+        LINK2.href = "https://drive.google.com/drive/folders/1-6mwEqX9VCEBM8QwqZOXuh64DAzIRRRU";
+     LINK3.style.opacity = ".1";
+     LINK2.style.opacity = "1";
+        TITULO.textContent = "JACONOR 73"; 
+}      
+
+       J.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/15jrBPBHXRsgU8vXeJV0wvAtpCsawIDom";
+        LINK2.href = "https://drive.google.com/drive/folders/1wZ8lXwJhmJ_zfb8gd_JUR1RdFXLitGpj";
+    LINK3.style.opacity = ".1";
+    LINK2.style.opacity = "1";
+        TITULO.textContent = "MISTERIOS OCULTOS"; 
+}     
+
+       K.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/152-9ljj7boG4vKd-FmcbjIH-iEdxDDwL";
+        LINK2.href = "https://drive.google.com/drive/folders/10W0wtI_PuO4BDMrMsN_qkUsw4y_14Sgz";
+     LINK3.style.opacity = ".1";
+     LINK2.style.opacity = "1";
+        TITULO.textContent = "NAOV"; 
+}     
+
+       Li.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/15AoZ-s_UN5jTpEWQX0K0KEfwQcnH4mQE";
+        LINK2.href = "https://drive.google.com/drive/folders/10W0wtI_PuO4BDMrMsN_qkUsw4y_14Sgz";
+        LINK3.href = "https://drive.google.com/drive/folders/1Cvg9JzRr29aKH-sEtH34h9N5qwzZq8dG";
+    LINK2.style.opacity = "1";
+    LINK3.style.opacity = "1";
+        TITULO.textContent = "OLIVER IBAÑES"; 
+}     
+
+      M.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/14sYTLx2fQPsqDEPAgdVyRAG4gDqFPVqm";
+    LINK2.style.opacity = ".1";
+    LINK3.style.opacity = ".1";
+        TITULO.textContent = "PERO ESO ES OTRA HISTORIA"; 
+}      
+
+      N.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/13mKXsJXug_RCUMWhczPbjNeUOYLSSLs9";
+     LINK2.style.opacity = ".1";
+     LINK3.style.opacity = ".1";
+        TITULO.textContent = "ENERGY"; 
+}     
+
+      O.onclick = function(){
+        LINK1.href = "https://drive.google.com/drive/folders/1AyudhMTP2cF7-khvg4cYj3LvLAWAVgL-";
+        LINK2.href = "https://drive.google.com/drive/folders/1DTYPpFMOh0HnwUcSSI1NOAKgCGIMP1Md";
+      LINK3.style.opacity = ".1";
+      LINK2.style.opacity = "1";
+        TITULO.textContent = "MÁS"; 
+}     
+</script>
+</body>
+</html>
