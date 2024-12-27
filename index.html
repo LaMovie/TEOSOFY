@@ -3,26 +3,35 @@
 <head>
     <meta charset="UFT-8">
     <meta http-equiv="X-UA-Compatible" contect="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" contect="width=device-width,initial-scale=1.0">
     <title>Document</title> 
 <style>
 body {
     font-family: sans-sarif;
     background: black;
+    position: fixed;
 }
 .contenedor{
-    gap: 20px;
-    width: 102%;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    aling-content: flex-start;
+    margin-top: 5vh;
+    margin-left: -1vh;       
+}
+.contenedor img{
+    margin-left: 13vh;
+    width: 100%;
+    height: 80%;
+    background: orange;
+    transition: 1.5s;
+    border-radius: 20px;
+}
+#Content {   
+    gap: 10px;
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: repeat(3, 1fr);
 }
 .I {
-    width: 100%;
-    flex-grow: 1;     
-    flex-basis: 100px; 
-    border-radius: 20px;
   &:hover {
       scale: 130%;
       transition: .2s linear;
@@ -31,6 +40,7 @@ body {
  }
 }
 #Pantalla {
+    height: 200px;
     border-radius: 20px;
 }
 #Modal {
@@ -135,6 +145,10 @@ a {
     opacity: 1;
   }
 }
+#L {
+    opacity: .7;
+    scale: 50%;
+}
 </style>
 </head>
 <body>
@@ -150,9 +164,9 @@ a {
      <a id="LINK3" href="#" target="_blank">🔴 SALA 3</a>
     
            </div></div>
-  
-  <ul onclick="mostrarAlerta()">
-     <div class="contenedor">
+  <div class="contenedor">
+    <div id="Content">
+ <ul onclick="mostrarAlerta()">     
   <li><img id="A" class="I" src="https://da.gd/xPisS"></li>
     
         <li><img id="B" class="I" src="https://da.gd/UxWM0"></li>       
@@ -186,7 +200,7 @@ a {
     </ul>
             </div>
          </div>
-     
+       
             <img id="L" src="https://da.gd/WtPVG9" alt="Retroceder"/>       
         </center>                     
 <script>
@@ -323,7 +337,3 @@ function cerrarAlerta() {
 </script>
 </body>
 </html>
-
-
-
-
