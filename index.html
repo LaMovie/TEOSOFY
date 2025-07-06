@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <HTML Lang="en">
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title> 
@@ -150,6 +150,9 @@ a {
     opacity: 1;
   }
 }
+#LINK4 {
+    display: none;
+}
 </style>
 </head>
 <body>
@@ -163,6 +166,7 @@ a {
      <a id="LINK1" href="#" target="_blank">🔴 SALA 1</a>
      <a id="LINK2" href="#" target="_blank">🔴 SALA 2</a>
      <a id="LINK3" href="#" target="_blank">🔴 SALA 3</a>
+     <a id="LINK4" href="#" target="_blank">🔴 SALA 4</a>
     
            </div></div>
   
@@ -213,6 +217,7 @@ a {
 
 function cerrarAlerta() {
  Modal.style.animation = 'Desfaz .8s linear forwards';
+    LINK4.style.display = 'none';
 }
 
     A.onclick = function(){
@@ -276,8 +281,10 @@ function cerrarAlerta() {
         LINK1.href = "https://drive.google.com/drive/folders/15YkA9Q3sxBoCgowqiDnZezcQ7o6mah_W";
         LINK2.href = "https://drive.google.com/drive/folders/13Y-BcWF8KRanBKUSgywZCoT6BNA-EljN";
         LINK3.href = "https://drive.google.com/drive/folders/1DBaQUp6p3rhdZyfHyGqmhZAcStfRsrNb";
+        LINK4.href = "https://drive.google.com/drive/folders/1--B-rflvst7sHUtgPLifsfHtqy-tZYeq";
     LINK2.style.opacity = "1";
     LINK3.style.opacity = "1";
+    LINK4.style.display = "block";
         TITULO.textContent = "TEOSOFIA"; 
 }         
 
