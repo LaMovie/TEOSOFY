@@ -113,8 +113,8 @@ a {
     font-weight: bold;
 }
 .puff-in-hor {
-	-webkit-animation: puff-in-hor 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	-webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
 
 @-webkit-keyframes puff-in-hor {
@@ -157,6 +157,7 @@ a {
     color: gold;
     font-size: 15px;
     margin-top: 2vh;
+    margin-left: -7vh;
     font-weight: bold;
     border-radius: 20px;
     background: purple;    
@@ -212,10 +213,24 @@ a {
         <li><img id="O" class="I" src="https://da.gd/gLQIk"></li>       
 </div>
    </div>
-   <a  href="https://lamovie.github.io/SeeKee/"><button id="Enlace">💊 CHAT SEEKEE 💊</button></a>
-    </ul>
-                 
-        </center>                     
+   <button id="Enlace">💊 CHAT SEEKEE 💊</button>
+    </ul>                
+        </center>   
+
+<script>
+function abrirFuera(urlDestino) {
+     var urlSinProtocolo = urlDestino.replace("https://", "");
+      
+      var intentURL = "intent://" + urlSinProtocolo + "#Intent;scheme=https;action=android.intent.action.VIEW;end;";
+      
+  window.location.href = intentURL;
+ }
+
+    Enlace.onclick = () => {
+        var URL = 'https://lamovie.github.io/SeeKee';            
+        abrirFuera(URL);
+ }
+</script>                  
 <script>
     function mostrarAlerta() {
  Modal.style.display = "block";
