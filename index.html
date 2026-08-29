@@ -8,38 +8,61 @@
 <style>
 body {
     width: 100%;
-    position: fixed;
+    max-width: 600px; /* Límite para PC */
+    margin: 0 auto; /* Centrado automático */
     background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 .Contenedor {
-    gap: 20px;
-    width: 90%;
-    height: 50vh;
+    gap: 15px;
+    width: 95%;
+    height: 45vh; /* Reducimos de 50vh a 45vh para darle espacio al botón */
     display: grid;
     overflow-y: auto;
-    margin-left: -3vh;
+    margin-left: 0; 
     grid-template-columns: repeat(3, 1fr);    
     list-style: none;    
+    padding: 10px 0;
 }
 .Contenedor img {
     width: 100%;
-    height: 80%;
+    height: auto;
+    aspect-ratio: 1/1; /* Obliga a que las carátulas sean cuadradas uniformes */
+    object-fit: cover;
     background: orange;
-    transition: 1.5s;
+    transition: 0.3s; /* Transición más rápida y fluida */
     border-radius: 20px;
     cursor: pointer;
-  &:hover {
-      scale: 130%;
-      transition: .2s linear;
-      border: 2px solid #4f9;
-      box-shadow: 0 0 30px #4f9;
-  }
+}
+.Contenedor img:hover {
+    transform: scale(1.1); /* Reemplaza el scale 130% que desbordaba la pantalla */
+    border: 2px solid #4f9;
+    box-shadow: 0 0 20px #4f9;
 }
 #Pantalla {
-    scale: 95%;
+    width: 95%;
+    max-width: 550px;
     height: 35vh;
-    margin-left: -2vh;
+    margin: 10px 0; /* Centrado sin usar márgenes negativos */
     border-radius: 20px;
+}
+#Enlace {
+    width: 80%;
+    max-width: 400px;
+    height: 6vh;
+    color: gold;
+    font-size: 15px;
+    margin: 5px auto 15px auto; /* Quitamos margen arriba para pegarlo más a la lista */
+    font-weight: bold;
+    border-radius: 20px;
+    background: purple;  
+    cursor: pointer;
+}
+#Enlace:hover {
+    color: #4f3;
 }
 #Modal {
     top: 0;
@@ -98,21 +121,6 @@ body {
 #TITULO {
     color: red;
     font-weight: bold;
-}
-#Enlace {
-    width: 80%;
-    height: 6vh;
-    color: gold;
-    font-size: 15px;
-    margin-top: 2vh;
-    margin-left: -3vh;
-    font-weight: bold;
-    border-radius: 20px;
-    background: purple;  
-    cursor: pointer;
-  &:hover {
-      color: #4f3;
-  }  
 }
 .puff-in-hor {
     -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
