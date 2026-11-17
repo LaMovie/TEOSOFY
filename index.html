@@ -17,7 +17,7 @@ body {
     position: relative;
 }
 .Contenedor {
-    gap: 15px;
+    gap: 25px;
     width: 95%;
     height: 45vh; /* Reducimos de 50vh a 45vh para darle espacio al botón */
     display: grid;
@@ -38,9 +38,8 @@ body {
     cursor: pointer;
 }
 .Contenedor img:hover {
-    transform: scale(1.1); /* Reemplaza el scale 130% que desbordaba la pantalla */
-    border: 2px solid #4f9;
-    box-shadow: 0 0 20px #4f9;
+    filter: brightness(1.3) saturate(170%);
+    box-shadow: 10px 5px 20px #4f9;
 }
 #Pantalla {
     width: 95%;
